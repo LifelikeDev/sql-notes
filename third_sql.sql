@@ -39,6 +39,34 @@
 
 -- UPDATE comments SET body = 'Some other comment' WHERE id = 5;
 
+-- SELECT * FROM comments;
 
-SELECT * FROM comments;
+-- SELECT
+-- comments.body,
+-- posts.title
+-- FROM comments
+-- LEFT JOIN posts
+-- ON posts.id = comments.post_id
+-- ORDER BY posts.title;
+
+-- SELECT
+-- patrons.first_name,
+-- patrons.last_name,
+-- comments.body,
+-- comments.publish_date
+-- FROM comments
+-- RIGHT JOIN patrons
+-- ON patrons.id = comments.patron_id
+-- ORDER BY comments.body;
+
+SELECT
+patrons.first_name,
+patrons.last_name,
+posts.title,
+comments.body,
+comments.publish_date
+FROM comments
+INNER JOIN patrons ON patrons.id = comments.patron_id
+INNER JOIN posts ON posts.id = comments.post_id
+ORDER BY comments.id;
 
