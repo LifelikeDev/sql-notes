@@ -18,10 +18,4 @@
 -- (5, 'Fifth Post', 'Somebody thank Him for me')
 -- ;
 
--- UPDATE posts SET patron_id = 100 WHERE id = 1;
--- UPDATE posts SET patron_id = 200 WHERE id = 2;
--- UPDATE posts SET patron_id = 300 WHERE id = 3;
--- UPDATE posts SET patron_id = 400 WHERE id = 4;
--- UPDATE posts SET patron_id = 500 WHERE id = 5;
-
 SELECT * FROM posts; 
